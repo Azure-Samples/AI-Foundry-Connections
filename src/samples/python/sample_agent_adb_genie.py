@@ -31,6 +31,10 @@ from azure.identity import DefaultAzureCredential
 from databricks_ai_bridge.genie import Genie, GenieResponse
 from azure.ai.agents.models import (FunctionTool, ToolSet)
 from typing import Any, Callable, Set
+import os
+
+os.environ["DATABRICKS_SDK_UPSTREAM"] = "AzureAIFoundry"
+os.environ["DATABRICKS_SDK_UPSTREAM_VERSION"] = "1.0.0"
 
 DATABRICKS_ENTRA_ID_AUDIENCE_SCOPE = "2ff814a6-3304-4ab8-85cb-cd0e6f879c1d/.default" 
 # Well known Entra ID audience for Azure Databricks - https://learn.microsoft.com/en-us/azure/databricks/dev-tools/auth/user-aad-token
