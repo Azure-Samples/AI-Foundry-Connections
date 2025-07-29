@@ -1,0 +1,10 @@
+databricks-sdk
+azure-identity
+azure-ai-agents
+azure-ai-projects
+azure.storage.blob
+microsoft-agents-authentication-msal
+microsoft-agents-activity
+microsoft-agents-hosting-core
+microsoft-agents-hosting-teams
+microsoft-agents-hosting-aiohttp
