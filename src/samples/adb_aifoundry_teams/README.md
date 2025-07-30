@@ -7,7 +7,7 @@ This project demonstrates a sample Teams app that communicates with Azure Databr
 ## Prerequisites
         - Access to Azure tenant/subscription & Teams Admin+Dev Center with appropriate roles 
         - Familiarity with Azure Databricks 
-        - Devtunnel
+        - Devtunnel (https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/cli-commands)
         - Python 3.13+
         - Azure Bot Service
         - Teams App created and uploaded  on Teams Admin Center  
@@ -19,7 +19,7 @@ This project demonstrates a sample Teams app that communicates with Azure Databr
 
 ### Devtunnel Setup
 
-        - Install devtunnel
+        - Install devtunnel on Windows (Refer this https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/get-started?tabs=windows for other OS)
 
                 winget install Microsoft.devtunnel OR
                 winget upgrade Microsoft.devtunnel
