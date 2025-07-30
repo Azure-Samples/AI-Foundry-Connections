@@ -15,16 +15,16 @@ This project demonstrates a sample Teams app that communicates with Azure Databr
 
 ### Azure Databricks Sample Dataset and Genie
 
-        Use this to create dataset and deploy Genie https://www.databricks.com/resources/demos/tutorials/aibi-sales-pipeline-overview?itm_data=demo_center
+        - Use this to create dataset and deploy Genie https://www.databricks.com/resources/demos/tutorials/aibi-sales-pipeline-overview?itm_data=demo_center
 
 ### Devtunnel Setup
 
-        Install devtunnel
+        - Install devtunnel
 
-        winget install Microsoft.devtunnel OR
-        winget upgrade Microsoft.devtunnel
+                winget install Microsoft.devtunnel OR
+                winget upgrade Microsoft.devtunnel
 
-        #Create persistent devtunnel (active for 30 days only)  - we are adding single port 3978 to the tunnel
+        - Create persistent devtunnel (active for 30 days only)  - we are adding single port 3978 to the tunnel
 
             devtunnel create my-tunnel -a
             devtunnel port create -p 3978 my-tunnel
@@ -194,7 +194,7 @@ This project demonstrates a sample Teams app that communicates with Azure Databr
 
         Go to https://admin.teams.microsoft.com/ and do the following
 
-        VIsit https://admin.teams.microsoft.com/policies/manage-apps/ 
+        Visit https://admin.teams.microsoft.com/policies/manage-apps/ 
         
         Click Actions | Upload New App and select the App Manifest zip file (you downloaded to the local computer in the previous step).
 
@@ -238,12 +238,10 @@ This project demonstrates a sample Teams app that communicates with Azure Databr
         -   What is the total pipeline amount for a specific account?
         -   What is the average probability of closing an opportunity by region?
 
-### Some homework for additional learning 
+### Some homework 
 
-    - Azure AI Agent is being dynamically created every single time. One can resuse an existing agent to reduce the execution time.
-
-    - Figure out how to deploy the Python App on Azure App Service (Web App) or Azure Kubernetes Service or Azure Container Service. Bot Messaging EndPoint and Domains field in Teams manifest field would need to point to the url of the deployed app. Retest the Teams app again to ensure that the app still works.
-
-    - Learn how to build the same app in different languages (C#, TypeScript) with M365 Agents Toolkit (Refer documentation as needed)
-
-    - Follow the security and regional deployment best practices for production readiness.
+    - Enhance your learning by doing the following.
+            - Azure AI Agent is being dynamically created every single time. One can resuse an existing agent to reduce the execution time.   
+            - Figure out how to deploy the Python App on Azure App Service (Web App) or Azure Kubernetes Service or Azure Container Service. Bot Messaging EndPoint and Domains field in Teams manifest field would need to point to the url of the deployed app. Retest the Teams app again to ensure that the app still works.
+            - Learn how to build the same app in different languages (C#, TypeScript) with M365 Agents Toolkit (Refer documentation as needed)
+            - Follow the security and regional deployment best practices for production readiness.
