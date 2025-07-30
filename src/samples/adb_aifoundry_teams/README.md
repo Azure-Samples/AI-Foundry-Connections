@@ -241,7 +241,7 @@ This project demonstrates a sample Teams app that communicates with Azure Databr
 ### Some homework 
 
     - Enhance your learning by doing the following.
-            - Azure AI Agent is being dynamically created every single time. One can resuse an existing agent to reduce the execution time.   
+            - Azure AI Agent is being dynamically created every single time. One can resuse an existing agent to reduce the execution time. Also, tweak the sample to ensure that Genie knows the context (prior questions) to address the next set of questions.  
             - Figure out how to deploy the Python App on Azure App Service (Web App) or Azure Kubernetes Service or Azure Container Service. Bot Messaging EndPoint and Domains field in Teams manifest field would need to point to the url of the deployed app. Retest the Teams app again to ensure that the app still works.
             - Learn how to build the same app in different languages (C#, TypeScript) with M365 Agents Toolkit (Refer documentation as needed)
             - Follow the security and regional deployment best practices for production readiness.
