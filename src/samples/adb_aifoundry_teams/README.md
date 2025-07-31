@@ -5,13 +5,13 @@ This project demonstrates a sample Teams app that communicates with Azure Databr
 **Disclaimer**: Sample Teams app is mean't for learning purposes only and not mean't for production. Sample shows how one can use the app on local device (laptop) using devtunnel, but one needs to deploy the app on the cloud (see homework section towards the end).  One also needs to follow standard engg best practices (security, availability, scalability) before going into production.
 
 ## Prerequisites
-    - Access to Azure tenant/subscription & Teams Admin+Dev Center with appropriate roles 
-    - Familiarity with Azure Databricks 
-    - Devtunnel
-    - Python 3.13+
-    - Azure Bot Service
-    - Teams App created and uploaded  on Teams Admin Center  
-    - AI Foundry Hub & Project is created, Connection with Azure Databricks and LLM model (e.g. gpt-4o-mini or some other model) is deployed.
+-   Access to Azure tenant/subscription & Teams Admin+Dev Center with appropriate roles 
+-   Familiarity with Azure Databricks 
+-   Devtunnel https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/cli-commands
+- Python 3.13+
+- Azure Bot Service
+- Teams App created and uploaded  on Teams Admin Center
+- AI Foundry Hub & Project is created, Connection with Azure Databricks and LLM model (e.g. gpt-4o-mini or some other model) is deployed.
 
 ### Azure Databricks Sample Dataset and Genie
 
@@ -19,27 +19,26 @@ This project demonstrates a sample Teams app that communicates with Azure Databr
 
 ### Devtunnel Setup
 
-Install devtunnel
+-   Install devtunnel on Windows (Refer this https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/get-started?tabs=windows for other OS)
 
-```bash
-    winget install Microsoft.devtunnel OR
-    winget upgrade Microsoft.devtunnel
-```
+    ```bash
+        winget install Microsoft.devtunnel OR
+        winget upgrade Microsoft.devtunnel
+    ```
 
-```bash
-    #Create persistent devtunnel (active for 30 days only) & add port 3978 
+-   Create persistent devtunnel (active for 30 days only) & add port 3978
 
-    devtunnel create my-tunnel -a
-    devtunnel port create -p 3978 my-tunnel
+    ```bash
+        devtunnel create my-tunnel -a
+        devtunnel port create -p 3978 my-tunnel
+        
+        #Host the tunnel 
+
+        devtunnel host my-tunnel
+    ```
+
+-   **Imp:** Grab the url shown by devtunnel.  It will be something like <https://dl5zst7j-3978.usw3.devtunnels.ms>
     
-    #Used for running the app locally and debugging purposes only
-
-    devtunnel host my-tunnel
-```
-
-**Imp:** Grab the url shown by devtunnel.  It will be something like <https://dl5zst7j-3978.usw3.devtunnels.ms>
-    
-
 ### Create Azure Bot and Configure App Registration
 
 Please do the following
@@ -182,7 +181,6 @@ Please do the following
 
         pip install -r requirements.txt
         
-
 ### Create Teams manifest app
 
 -   Go to https://dev.teams.microsoft.com/ and do the following
@@ -215,7 +213,6 @@ Please do the following
     -   Click Teams | Manage Apps or https://admin.teams.microsoft.com/policies/manage-apps/ 
         
     -   Click **Actions | Upload New App** and select the App Manifest zip file (you downloaded to the local computer in the previous step).
-
 
 ## Accessing this sample app from Teams (browser)
 
@@ -258,12 +255,12 @@ Please do the following
 
 ### Homework
 
-Please explore the following to enhance your learning
+-   Please explore the following to enhance your learning
 
-- Azure AI Agent is being dynamically created every single time. One can resuse an existing agent to reduce the execution time.
+    - Azure AI Agent is being dynamically created every single time. One can resuse an existing agent to reduce the execution time.
 
-- Figure out how to deploy the Python App on Azure App Service (Web App) or Azure Kubernetes Service or Azure Container Service. Bot Messaging EndPoint and Domains field in Teams manifest field would need to point to the url of the deployed app. Retest the Teams app again to ensure that the app still works.
+    - Figure out how to deploy the Python App on Azure App Service (Web App) or Azure Kubernetes Service or Azure Container Service. Bot Messaging EndPoint and Domains field in Teams manifest field would need to point to the url of the deployed app. Retest the Teams app again to ensure that the app still works.
+    
+    - Learn how to build the same app in different languages (C#, TypeScript) with M365 Agents Toolkit (Refer documentation as needed)
 
-- Learn how to build the same app in different languages (C#, TypeScript) with M365 Agents Toolkit (Refer documentation as needed)
-
-- Follow the security and regional deployment best practices for production readiness.
+    - Follow the security and regional deployment best practices for production readiness.
